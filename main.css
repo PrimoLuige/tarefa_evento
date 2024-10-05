@@ -3,16 +3,20 @@
     text-decoration: none;
     margin: 0;
     font-family: Roboto, sans-serif;
-
+    box-sizing: border-box;
+    overflow-x: hidden 
 }
 header{
-    position: sticky;
-    border-width:0;
+  
+  border-width:0; 
   background-color:rgba(36, 13, 13, 0.856) ;
   height: 70px;
+  overflow-x: hidden 
 }
 .navbar{
-    margin-left: 0;
+  width: 100%;
+  margin-left: 0;
+  overflow-x: hidden 
 }
 .navbar ul{
     
@@ -39,6 +43,20 @@ header{
     height: 70px;
     
 }
+@media(max-width:860px){
+  .navbar img{
+    width: 200px;
+  }
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden; /* Esconde o overflow horizontal */
+}
+
+
+
+
 
 .hero{
     width: 100%;
@@ -47,11 +65,13 @@ header{
     background-size: cover;
   padding-top: 64px;
   padding-bottom: 100px;
-  position: relative;
+  
   height: 640px;
     margin: 0 auto;
-    display: block;
+    
+    
 }
+
     
 
 /*.hero img{
@@ -72,29 +92,32 @@ header{
     color: #fff;
   }
   .wall{
+    display:block;
+    width: 100%;
     height: 100px;
     background-color: black;
     color:azure;
     text-align: center;
+
+    
     
     
   }
   .wall h2{
-    display: flex;
-    text-align: center;
-    text-wrap:nowrap ;
-    margin-left: 320px;
-    margin-top: 40px;
-    text-decoration:underline;
-    
+    display: inline;
+    text-decoration: underline;
     
   }
   
+  
+  
   .infos {
+    width: 100%;
     background-color: #fff;
     justify-content: space-between;
     padding: 16px 24px;
     display: flex;
+    flex-wrap: wrap;
     
   }
   
@@ -115,6 +138,7 @@ header{
     display: block;
   }
   .infos button{
+    
     background-color: rgba(140, 0, 255, 0.884);
     color: white;
     font-weight: 700;
@@ -122,6 +146,7 @@ header{
     padding: 3px;
     border-radius: 7px;
     cursor: pointer;
+    
   }
 
   .infos_segundo {
@@ -129,6 +154,7 @@ header{
     justify-content: space-between;
     padding: 16px 24px;
     display: flex;
+    flex-wrap: wrap
   }
   
   .infos_segundo ul{
@@ -155,9 +181,15 @@ header{
     border-radius: 7px;
     cursor: pointer;
   }
+  
+  
+  
+
+  
+  
   .formulario{
     width: 320px;
-    height: 450px;
+    height: 475px;
  	  border-radius:18px ;
  	  padding: 1rem;
     display: flex;
@@ -166,9 +198,27 @@ header{
     background-color: #f8f8f9;
     box-shadow: -1px 5px 7px 0 rgba(0, 0, 0, 0.15);
     padding-top: 3px;
-    margin-left: 640px;
+    
+    
     
    
+}
+@media(min-width:320px){
+  .formulario{
+    margin-left: 64px;
+  }
+}
+
+@media(min-width:800px){
+  .formulario{
+    margin-left: 320px;
+  }
+}
+
+@media(min-width:1280px){
+  .formulario{
+    margin-left: 640px;
+  }
 }
 
 .formulario input, label, h2, textarea, button{
@@ -205,6 +255,7 @@ header{
       display: block;
     }
 }
+
 .event_image{
    max-width: 360px;
 }
